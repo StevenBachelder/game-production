@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game Production — MFA course, 2026–2027</title>
+<meta name="description" content="MFA Game Production: course description, teaching forms, week-by-week structure and calendar for autumn 2026 into 2027.">
+<meta name="color-scheme" content="light">
+
+<meta property="og:title" content="Game Production — MFA course">
+<meta property="og:description" content="What is unique to games and game design? Course structure, teaching forms and calendar.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar" id="topbar">
+  <div class="topbar__in">
+    <a class="topbar__brand" href="#top">
+      <span class="topbar__mark" aria-hidden="true"></span>
+      Game Production
+    </a>
+    <nav class="topbar__nav" aria-label="Sections">
+      <a href="#course">Course</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#weeks">Weeks</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#samlinger">Samlinger</a>
+      <a href="#literature">Literature</a>
+    </nav>
+    <p class="topbar__next" id="next-session"></p>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top">
+    <div class="hero__in">
+      <p class="eyebrow eyebrow--light" id="hero-eyebrow"></p>
+      <h1 class="hero__title" id="hero-title"></h1>
+      <p class="hero__q" id="hero-q"></p>
+      <p class="hero__stand" id="hero-stand"></p>
+
+      <div class="hero__strip">
+        <p class="hero__striplab">The course, all 17 weeks</p>
+        <a class="strip" href="#weeks" id="hero-strip" aria-label="Jump to the week-by-week structure"></a>
+        <p class="hero__stripkey">
+          <span class="key"><i class="sw sw--samling"></i>Samling</span>
+          <span class="key"><i class="sw sw--exam"></i>Exam week</span>
+        </p>
+      </div>
+
+      <dl class="stats" id="hero-stats"></dl>
+    </div>
+  </section>
+
+  <!-- ================= COURSE ================= -->
+  <section class="band" id="course">
+    <div class="wrap">
+      <p class="eyebrow">The course</p>
+      <div class="lede">
+        <h2 class="h2">Game design as a means of enquiry</h2>
+        <p class="lede__p" id="aim"></p>
+      </div>
+      <ul class="kinds" id="kinds"></ul>
+    </div>
+  </section>
+
+  <!-- ================= TEACHING ================= -->
+  <section class="band band--alt" id="teaching">
+    <div class="wrap">
+      <p class="eyebrow">How it is taught</p>
+      <h2 class="h2">Two contact days, six formats</h2>
+      <p class="sub">Tuesday carries the taught input. Wednesday carries the response to each team's own work. The rest of the week belongs to the production.</p>
+
+      <div class="rhythm" id="rhythm"></div>
+
+      <h3 class="h3">The six teaching forms</h3>
+      <ul class="forms" id="forms"></ul>
+
+      <div class="tracks">
+        <h3 class="h3">Two tracks, running in parallel</h3>
+        <p class="sub">Every week pairs a teaching component with a matching focus for the production teams. What is taught on Tuesday is put to work in the project on Wednesday and after.</p>
+        <div class="tracks__pair">
+          <div class="tracks__lane tracks__lane--teach">
+            <p class="tracks__name">Teaching component</p>
+            <p class="tracks__note">Concepts, theory and method, delivered to the whole cohort.</p>
+          </div>
+          <div class="tracks__link" aria-hidden="true"></div>
+          <div class="tracks__lane tracks__lane--group">
+            <p class="tracks__name">Student group-work focus</p>
+            <p class="tracks__note">The same material applied inside each team's own production.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WEEKS ================= -->
+  <section class="band" id="weeks">
+    <div class="wrap">
+      <p class="eyebrow">Structure</p>
+      <h2 class="h2">Week by week</h2>
+      <p class="sub">Four phases across 16 teaching weeks, continuing into week 1 of 2027. Open a week to read the full description from the course document.</p>
+
+      <div class="boardbar">
+        <div class="legend">
+          <span class="key"><i class="sw sw--teach"></i>Teaching component</span>
+          <span class="key"><i class="sw sw--group"></i>Student group-work</span>
+        </div>
+        <button class="btn btn--ghost" id="expand-all" type="button" aria-pressed="false">Open all weeks</button>
+      </div>
+
+      <div class="board" id="board"></div>
+    </div>
+  </section>
+
+  <!-- ================= CALENDAR ================= -->
+  <section class="band band--alt" id="calendar">
+    <div class="wrap">
+      <p class="eyebrow">Dates</p>
+      <h2 class="h2">September – December 2026</h2>
+      <p class="sub">Every teaching day of the autumn. Tuesdays 13–16, Wednesdays 9–12.</p>
+
+      <div class="legend legend--cal">
+        <span class="key"><i class="sw sw--samling"></i>Samling</span>
+        <span class="key"><i class="sw sw--teachwash"></i>Tuesday · lectures &amp; workshops</span>
+        <span class="key"><i class="sw sw--groupwash"></i>Wednesday · consultations, supervisions &amp; studio visits</span>
+      </div>
+
+      <div class="months" id="months"></div>
+      <p class="callout" id="break-note"></p>
+    </div>
+  </section>
+
+  <!-- ================= SAMLINGER ================= -->
+  <section class="band" id="samlinger">
+    <div class="wrap">
+      <p class="eyebrow">Gatherings</p>
+      <h2 class="h2">The four Samlinger</h2>
+      <p class="sub">Intensive gatherings that open, re-frame and close each stage of the course.</p>
+      <ul class="samlist" id="samlist"></ul>
+      <div id="samling-detail"></div>
+    </div>
+  </section>
+
+  <!-- ================= LITERATURE ================= -->
+  <section class="band band--alt" id="literature">
+    <div class="wrap">
+      <p class="eyebrow">Reading</p>
+      <h2 class="h2">Literature</h2>
+      <p class="sub">A starting list, grouped by what each cluster contributes to the work.</p>
+      <ul class="lit" id="lit"></ul>
+      <p class="callout" id="lit-note"></p>
+    </div>
+  </section>
+
+  <!-- ================= DOWNLOADS ================= -->
+  <section class="band band--dark" id="downloads">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--light">Take it with you</p>
+      <h2 class="h2 h2--light">The same course, as slides</h2>
+      <p class="sub sub--light">The presentation version of this page, for staff meetings and the introduction session.</p>
+      <ul class="dl" id="dl"></ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p class="foot__l">Game Production · MFA · <span id="foot-year"></span></p>
+    <p class="foot__r">Course description. Samling 4 and its description are still a draft.</p>
+  </div>
+</footer>
+
+<noscript>
+  <div class="wrap" style="padding:2rem 0">
+    <p class="callout">This page builds the schedule, calendar and reading list with JavaScript. Turn it on to see them, or download the PDF above.</p>
+  </div>
+</noscript>
+
+<script src="assets/js/course-data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
