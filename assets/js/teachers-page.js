@@ -13,6 +13,7 @@
     named
       ? named + " of " + TEACHERS.length + " confirmed so far. The rest are placeholders until names are added."
       : "Placeholder pages for the teaching team. Each one is ready for a photograph, a short description and a note to the students."));
+  wrap.appendChild(el("p", "sub", "Listed alphabetically by surname."));
 
   var grid = el("ul", "tgrid");
   TEACHERS.forEach(function (t) {
@@ -25,6 +26,11 @@
     txt.appendChild(el("span", "tcard__role", t.role || "Role to be confirmed"));
     var n = GP.daysFor(t.id).length;
     if (n) txt.appendChild(el("span", "tcard__days", n === 1 ? "1 session" : n + " sessions"));
+    if (t.url) {
+      var badge = el("span", "tcard__ext", "inn.no");
+      badge.setAttribute("title", "Has an official university profile");
+      txt.appendChild(badge);
+    }
     a.appendChild(txt);
     li.appendChild(a);
     grid.appendChild(li);

@@ -122,7 +122,15 @@ site half-filled and keep adding as the term is planned. A `resource` without a 
 shown as plain text, which suits a book or a handout.
 
 **To fill in a teacher**, open `assets/js/teacher-data.js` and edit that person's entry —
-`name`, `role`, `about` and `note` (their short message to the students). For a photograph,
+`name`, `surname`, `role`, `url`, `about` and `note` (their short message to the students).
+The list sorts itself alphabetically by `surname`, so the order in the file doesn't matter
+and new people can go at the end. Set `surname` explicitly rather than relying on the last
+word of the name, so that multi-word surnames land in the right place.
+
+`url` is their official INN University profile. It renders as a link that opens in a new
+tab, marked with an arrow — deliberately not a pop-up, because university sites normally
+refuse to be embedded in a frame and because it should be obvious to a student when they
+are leaving this site for the university's own pages. For a photograph,
 put a square image in `assets/img/teachers/` and write its file name in `photo`, e.g.
 `photo: "teacher-04.jpg"`. Until then the page shows the teacher's number in a circle.
 Teachers appear on a session automatically once their number is in that day's `people` list,

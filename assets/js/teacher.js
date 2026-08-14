@@ -35,6 +35,7 @@
   meta.appendChild(el("h1", "profhead__name", t.name));
   if (t.role) meta.appendChild(el("p", "profhead__role", t.role));
   if (!t.photo) meta.appendChild(el("p", "profhead__hint", "No photograph yet."));
+  if (t.url) meta.appendChild(profileLink(t, "extlink extlink--light"));
   hw.appendChild(meta);
 
   head.appendChild(hw);
@@ -50,6 +51,12 @@
   about.appendChild(el("h2", "dayblock__h", "About"));
   if (t.about) about.appendChild(el("p", "daybody", t.about));
   else about.appendChild(el("p", "empty", "A short description will go here."));
+  if (t.url) {
+    var src = el("p", "dayblock__src");
+    src.appendChild(document.createTextNode("Official profile: "));
+    src.appendChild(profileLink(t, "extlink"));
+    about.appendChild(src);
+  }
   left.appendChild(about);
 
   var note = el("section", "dayblock");
@@ -101,6 +108,20 @@
 
   band.appendChild(wrap);
   root.appendChild(band);
+
+  /* an outbound link to the university profile, opening in a new tab */
+  function profileLink(person, cls) {
+    var a = el("a", cls);
+    a.href = person.url;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.appendChild(el("span", null, "inn.no profile"));
+    var i = el("span", "extlink__i", "\u2197");
+    i.setAttribute("aria-hidden", "true");
+    a.appendChild(i);
+    a.appendChild(el("span", "vh", "(opens the university website in a new tab)"));
+    return a;
+  }
 
   function tLink(target, label, dir) {
     if (!target) return el("span", "daynav__x");
