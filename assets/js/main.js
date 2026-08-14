@@ -8,6 +8,8 @@
   var DAY = 86400000;
   var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   var DOW = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+  var WORD = COURSE.wording || { calWeek: "week", courseWeek: "course" };
+  function calWeek(w) { return WORD.calWeek + " " + (w.calLabel || w.cal); }
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -112,7 +114,9 @@
     head.appendChild(el("span", "phase__sub", p.sub));
     var wks = COURSE.weeks.filter(function (w) { return w.n >= p.from && w.n <= p.to; });
     var first = wks[0], last = wks[wks.length - 1];
-    head.appendChild(el("span", "phase__wk", "weeks " + first.label + "–" + last.label + " · cal. " + first.cal + "–" + last.cal));
+    head.appendChild(el("span", "phase__wk",
+      "course weeks " + first.label + "\u2013" + last.label +
+      " · calendar " + WORD.calWeek + "s " + first.cal + "\u2013" + (last.calLabel || last.cal)));
     sec.appendChild(head);
     sec.appendChild(el("p", "phase__note", p.note));
 
@@ -131,7 +135,7 @@
 
     var n = el("div", "wk__n");
     n.appendChild(el("b", null, w.label));
-    n.appendChild(el("span", null, "cal. " + w.cal));
+    n.appendChild(el("span", null, calWeek(w)));
     n.appendChild(el("span", null, range(w.tueDate, w.wedDate)));
     btn.appendChild(n);
 
@@ -224,13 +228,13 @@
       var tueIn = plus(monday, 1).getUTCMonth() === m.month;
       var wedIn = plus(monday, 2).getUTCMonth() === m.month;
       if (cw) {
-        gut.appendChild(el("span", null, "wk " + cw.cal));
+        gut.appendChild(el("span", null, calWeek(cw)));
         if (tueIn || wedIn) {
-          gut.appendChild(el("small", null, cw.exam ? "course " + cw.n + " · exam" : "course " + cw.n));
+          gut.appendChild(el("small", null, WORD.courseWeek + " " + cw.n));
         }
       } else if (extraWeeks[mk]) {
         gut.classList.add("is-break");
-        gut.appendChild(el("span", null, "wk " + extraWeeks[mk]));
+        gut.appendChild(el("span", null, WORD.calWeek + " " + extraWeeks[mk]));
         gut.appendChild(el("small", null, "break"));
       }
       grid.appendChild(gut);
@@ -238,13 +242,13 @@
       for (var c = 0; c < 7; c++) {
         var dt = plus(monday, c);
         var inMonth = dt.getUTCMonth() === m.month && dt.getUTCFullYear() === m.year;
-        var cell = el("div", "mo__d");
+        var ev = inMonth ? byDate[iso(dt)] : null;
+        var cell = el(ev ? "a" : "div", "mo__d");
         if (!inMonth) {
           cell.classList.add("is-out");
           grid.appendChild(cell);
           continue;
         }
-        var ev = byDate[iso(dt)];
         var isBreak = dt >= bFrom && dt <= bTo;
         if (ev && ev.week.samling) cell.classList.add("is-samling");
         else if (ev && ev.track === "teach") cell.classList.add("is-teach");
@@ -254,7 +258,14 @@
         cell.appendChild(el("span", "mo__num", String(dt.getUTCDate())));
         if (ev) {
           var lab = ev.track === "teach" ? ev.week.teach.short : (ev.week.group ? ev.week.group.short : "");
-          if (lab && lab !== "—") cell.appendChild(el("span", "mo__lab", lab));
+          if (lab && lab !== "\u2014") cell.appendChild(el("span", "mo__lab", lab));
+          if (ev.week.exam) cell.appendChild(el("span", "mo__exam", "Exam"));
+          cell.classList.add("is-link");
+          cell.href = "day.html?d=" + iso(dt);
+          cell.title = "Active \u2014 open " + (lab || "this session");
+          cell.setAttribute("aria-label",
+            "Active session, " + dt.getUTCDate() + " " + MONTHS[dt.getUTCMonth()] + ". " + (lab || ""));
+          cell.appendChild(el("span", "mo__active", "Active"));
         }
         grid.appendChild(cell);
       }

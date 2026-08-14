@@ -7,6 +7,15 @@
 
 const COURSE = {
 
+  /* ---- wording ---------------------------------------------------------
+     The words used in front of the two week numbers. Change them here and
+     they change everywhere on the page.
+     ---------------------------------------------------------------------- */
+  wording: {
+    calWeek: "week",        // before a calendar week number, e.g. "week 51"
+    courseWeek: "course"    // before a course week number, e.g. "course 16"
+  },
+
   /* ---- masthead ------------------------------------------------------- */
   programme: "MFA",
   title: "Game Production",
@@ -69,7 +78,9 @@ const COURSE = {
   /* ---- the weeks -------------------------------------------------------
      n       course week number
      label   how the week is written on screen
-     cal     calendar week
+     cal      calendar week
+     calLabel optional override for how the calendar week is written, used
+              when the year needs saying (e.g. "01/2027")
      monday  Monday of that week (Tuesday and Wednesday are derived from it)
      samling which Samling falls in this week, if any
      exam    true for the exam week
@@ -163,7 +174,7 @@ const COURSE = {
       group: { short: "Layers & artistic intention",
                long: "Reflection on the correlations between the multiple layers of production and the resulting experience, in relation to artistic intentions." } },
 
-    { n: 17, label: "1 ’27", cal: 1, monday: "2027-01-04",
+    { n: 17, label: "17", cal: 1, calLabel: "01/2027", monday: "2027-01-04",
       teach: { short: "Peeling the onion, continued",
                long: "Continuation of “peeling the onion”: reflecting on the multiple layers of production and experience. How to tell a story / forge / enact / transfer / structure. Review of the “gears of the game”." },
       group: { short: "—", long: null } },
