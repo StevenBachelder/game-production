@@ -15,7 +15,7 @@ and further reading suggestions per week.
   Norwegian IP addresses — check there for *Kamerakuren*.
 - **Internet Archive** (archive.org) lends scans one reader at a time, free with a login.
   The quickest legitimate route to Dewey, Ostrom, Huizinga, Caillois and Piaget.
-- **OPEN ACCESS** and **FREE** entries need no login. There are seven — enough to build required reading
+- **OPEN ACCESS** and **FREE** entries need no login. There are twelve — enough to build required reading
   around, since every student can reach them on day one.
 
 ISBNs are for ordering; confirm at point of purchase.
@@ -35,11 +35,22 @@ Chemero, A. (2003). An outline of a theory of affordances. *Ecological Psycholog
 > Affordances as relations between an animal's abilities and features of a situation. The
 > cleanest philosophical statement of the relational reading.
 
+Clark, L., & Kelomees, R. (Eds.). (2022). *[re|dis]connection: Interactive storytelling art*.
+ETC Press. https://doi.org/10.1184/R1/21565380.v1
+> **OPEN ACCESS** — A record of the ICIDS 2021 art exhibition at Tallinn University, with
+> essays in which the artists contextualise their own work. 224 pp. The publisher's page
+> also lists Rebecca Rouse; the catalogue record gives Clark and Kelomees as editors.
+
 Costall, A. (1995). Socializing affordances. *Theory & Psychology, 5*(4), 467–481.
 > "Canonical affordances": how culture stabilises what a thing is understood to be for.
 > Useful for anyone designing inside a genre.
 
 Costikyan, G. (2013). *Uncertainty in games*. MIT Press.
+
+De Koven, B. (2014). *A playful path*. ETC Press.
+> **OPEN ACCESS** — Short pieces on playfulness as a way of being rather than an activity.
+> De Koven, who wrote *The Well-Played Game*, died in 2018; this is the late, distilled
+> version of a lifetime's argument. Verify the year against the title page.
 
 Dewey, J. (2005). *Art as experience*. Perigee. (Original work published 1934)
 > Borrowable scan on the Internet Archive is the fastest free route. Paperback ISBN
@@ -138,6 +149,12 @@ https://doi.org/10.1007/s11423-015-9418-1
 
 Lankoski, P., & Björk, S. (Eds.). (2015). *Game research methods: An overview*. ETC Press.
 > **OPEN ACCESS** — free from Carnegie Mellon's ETC Press.
+
+Lankoski, P., & Holopainen, J. (Eds.). (2017). *Game design research: An introduction to
+theory & practice*. ETC Press.
+> **OPEN ACCESS** — The design-research companion to Lankoski & Björk (2015): research
+> *through* designing rather than research *about* games. For an MFA where the production is
+> the enquiry, this is arguably the more relevant of the two.
 
 Lantz, F. (2023). *The beauty of games*. MIT Press.
 > ISBN 978-0-262-04804-9. Your excerpt: pp. 1–164.
@@ -263,6 +280,10 @@ Vygotsky, L. S. (1978). *Mind in society: The development of higher psychologica
 > "Play and its role in the mental development of the child" (*Soviet Psychology, 5*(3),
 > 6–18) is more direct and circulates freely online.
 
+Walz, S. P. (2010). *Toward a ludic architecture: The space of play and games*. ETC Press.
+> **OPEN ACCESS** — How play and games are architected in space, reading game design against
+> architectural theory. ISBN 978-0-557-28563-1.
+
 Wing, C. (2026). *Bounce: Balls, walls, and bodies in games and play*. MIT Press.
 https://doi.org/10.7551/mitpress/15053.001.0001
 > **OPEN ACCESS** —
@@ -275,6 +296,12 @@ Psychology, 30*(2), 250–258.
 > Affordances as invitations, not merely possibilities. Restores the gradient Norman was
 > reaching for without collapsing affordance into cue. Probably the most directly useful of
 > these for a game designer.
+
+Zagal, J. P. (Ed.). (2019). *Game design snacks: Easily digestible game design wisdom*.
+ETC Press.
+> **OPEN ACCESS** — Short, non-academic nuggets of design wisdom, each grounded in a released
+> commercial game. Written by students from Zagal's introductory game design class at the
+> University of Utah. Worth checking how the title page words the editor line before citing.
 
 ---
 
@@ -298,6 +325,8 @@ has been and could be. Free.
 **Core:** Murray, *Hamlet on the Holodeck*.
 **Supporting:** Jenkins & Squire, "The art of contested spaces" — narrative as spatial
 arrangement, which is exactly your "sequential and/or spatial" framing. Free.
+Clark & Kelomees, *[re|dis]connection* — artists writing about their own interactive
+storytelling work. Free, and a useful counterweight to Murray's theory.
 
 ### Week 4 · System thinking and system design
 **Core:** Meadows, *Thinking in Systems* — read before the CLD workshop, not after.
@@ -315,18 +344,24 @@ Consolidation before green-lighting; no new reading.
 ### Week 7 · World building, production, pipelines
 **Core:** Macklin & Sharp, *Games, Design and Play* — iterative process and the pitch.
 **Supporting:** Fullerton, *Game Design Workshop*, on prototyping and the green-light.
+Walz, *Toward a Ludic Architecture* — how play and games are architected in space. Free, and
+the closest thing on the list to a world-building text.
 
 ### Week 8 · Rules, mechanics, affordances — the gears of the game
 **Core:** Salen & Zimmerman on rules and mechanics; Swink, *Game Feel*, on what the gears
 feel like in the hand.
 **Supporting:** Costikyan, *Uncertainty in Games*; Wing, *Bounce* (free), whose account of
-"bounce feel" in FIFA is a case study in Swink's sense of the term.
+"bounce feel" in FIFA is a case study in Swink's sense of the term. Zagal, *Game Design
+Snacks* (free) — short, concrete and grounded in released games, so it suits a team that
+wants examples rather than theory.
 
 ### Week 9 · Artistic intentionality
 **Core:** Nguyen, *Games: Agency as Art* — designers shape not only what players do but what
 they want while playing. Sharp, *Works of Game*, for the games-as-art framing.
-**Supporting:** Dewey, *Art as Experience*, and Greene, *Releasing the Imagination*, for the
-aesthetic ground. Flanagan, *Critical Play*, and Sicart (2013) where the intention is
+**Supporting:** Clark & Kelomees, *[re|dis]connection* (free) — twenty-odd artists stating
+their intentions in their own words, which is the exercise week 9 asks of the teams.
+Dewey, *Art as Experience*, and Greene, *Releasing the Imagination*, for the aesthetic
+ground. Flanagan, *Critical Play*, and Sicart (2013) where the intention is
 political or ethical. Isbister, *How Games Move Us*, if the intention is emotional.
 
 ### Week 10 · Game analysis, peer to peer
@@ -343,15 +378,17 @@ Consolidation before testing; no new reading.
 ### Weeks 13–14 · Research methods, play-testing, exam
 **Core:** Lankoski & Björk on playtesting and qualitative method (free); Fullerton's
 playtesting chapters.
-**Supporting:** Ke (2016) as a model of how a systematic review is built, for anyone whose
-project makes a learning claim.
+**Supporting:** Lankoski & Holopainen, *Game Design Research* (free) — research through
+designing, which is what an MFA production actually is. Ke (2016) as a model of how a
+systematic review is built, for anyone whose project makes a learning claim.
 
 ### Week 15 · Samling 4 — The phenomena of play and the structure of games
 This is where the authors named in your course document finally have titles attached.
 **Core:** Gibson, *The Ecological Approach to Visual Perception*, for affordances and the
 development of perception. Sutton-Smith, *The Ambiguity of Play*, for play as driver rather
 than product of culture. Huizinga, *Homo Ludens*, as the text they are both arguing with.
-**Supporting:** Goffman, *Encounters* ("Fun in Games"), for the frame that holds play
+**Supporting:** De Koven, *A Playful Path* (free), for playfulness as a disposition rather
+than an activity. Goffman, *Encounters* ("Fun in Games"), for the frame that holds play
 together. Vygotsky and Piaget for play in development. Upton, *The Aesthetic of Play*, and
 Sicart, *Play Matters*, for the contemporary reframing. Wing, *Bounce* (free), for play as a
 material and bodily matter.
