@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading — Game Production</title>
+<meta name="description" content="The reading list for MFA Game Production, arranged by week, with access notes and citations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="topbar__brand" href="index.html"><span class="topbar__mark" aria-hidden="true"></span>Game Production</a>
+    <nav class="topbar__nav" aria-label="Sections">
+      <a href="index.html#weeks">Weeks</a>
+      <a href="index.html#calendar">Calendar</a>
+      <a href="reading.html" class="is-here">Reading</a>
+      <a href="teachers.html">Teachers</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="readhead">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--light">Reading</p>
+      <h1 class="readhead__t">The reading list</h1>
+      <p class="readhead__s" id="read-intro"></p>
+      <dl class="stats stats--tight" id="read-stats"></dl>
+    </div>
+  </section>
+
+  <div class="readbar">
+    <div class="wrap readbar__in">
+      <div class="readbar__group" role="group" aria-label="Arrange by">
+        <span class="readbar__lab">Arrange</span>
+        <button class="chip is-on" data-view="week" type="button">By week</button>
+        <button class="chip" data-view="theme" type="button">By theme</button>
+        <button class="chip" data-view="az" type="button">A–Z</button>
+      </div>
+      <div class="readbar__group">
+        <label class="switch">
+          <input type="checkbox" id="free-only">
+          <span>Free to read now only</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="readnote" id="read-empty" hidden>Nothing matches that filter.</p>
+      <div id="reading"></div>
+
+      <div class="sources">
+        <h2 class="h3">Looking for something current</h2>
+        <ul class="sources__l" id="read-sources"></ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p class="foot__l">Game Production · MFA</p>
+    <p class="foot__r"><a href="index.html">Back to the course</a></p>
+  </div>
+</footer>
+
+<script src="assets/js/course-data.js"></script>
+<script src="assets/js/reading-data.js"></script>
+<script src="assets/js/reading.js"></script>
+</body>
+</html>

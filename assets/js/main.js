@@ -176,6 +176,35 @@
     pair.appendChild(gc);
     body.appendChild(pair);
 
+    // reading for this week, if reading-data.js is loaded
+    if (typeof READING !== "undefined") {
+      var rows = [];
+      READING.forEach(function (e) {
+        (e.weeks || []).forEach(function (pr) {
+          if (pr[0] === w.n) rows.push({ e: e, role: e.role === "further" ? "further" : pr[1] });
+        });
+      });
+      rows = rows.filter(function (r) { return r.role !== "further"; });
+      rows.sort(function (a, b) { return (a.role === "core" ? 0 : 1) - (b.role === "core" ? 0 : 1); });
+      if (rows.length) {
+        var rb = el("div", "wkr");
+        rb.appendChild(el("p", "wkr__h", "Reading"));
+        var rl = el("div", "wkr__l");
+        rows.slice(0, 4).forEach(function (r) {
+          var line = el("div", "wkr__i");
+          line.appendChild(el("span", "wkr__r wkr__r--" + r.role, r.role === "core" ? "Core" : "Sup"));
+          line.appendChild(el("span", null, r.e.apa.replace(/\*/g, "")));
+          rl.appendChild(line);
+        });
+        rb.appendChild(rl);
+        var more = el("a", "wkr__more",
+          rows.length > 4 ? "All " + rows.length + " texts for this week \u2192" : "Open the reading list \u2192");
+        more.href = "reading.html";
+        rb.appendChild(more);
+        body.appendChild(rb);
+      }
+    }
+
     btn.addEventListener("click", function () {
       var open = wrap.classList.toggle("is-open");
       btn.setAttribute("aria-expanded", open ? "true" : "false");

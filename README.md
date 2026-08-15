@@ -15,6 +15,7 @@ assets/css/styles.css          all styling
 assets/js/course-data.js       ← course structure: weeks, phases, literature
 assets/js/day-details.js       ← what happens on each teaching day
 assets/js/teacher-data.js      ← the 30 teachers
+assets/js/reading-data.js      ← the reading list
 assets/js/shared.js            helpers used by every page
 assets/js/main.js              builds index.html
 assets/js/day.js               builds day.html
@@ -25,7 +26,7 @@ assets/img/teachers/           put teacher photographs here
 assets/downloads/              the slide deck, PDF and PowerPoint
 ```
 
-The three files marked with an arrow are the ones you edit. Everything else
+The four files marked with an arrow are the ones you edit. Everything else
 reads from them.
 
 ---
@@ -136,7 +137,29 @@ put a square image in `assets/img/teachers/` and write its file name in `photo`,
 Teachers appear on a session automatically once their number is in that day's `people` list,
 and each teacher page lists the sessions they are on without you having to repeat anything.
 
-**To add a reading**, add a name to the right cluster in `literature`, or add a new cluster.
+**To add or change a reading**, edit `assets/js/reading-data.js`. Each entry carries the
+APA reference, one line on why it is on the course, an access category and the weeks it
+belongs to:
+
+```js
+{ id:"meadows2008",
+  apa:"Meadows, D. H. (2008). *Thinking in systems: A primer* (D. Wright, Ed.). Chelsea Green.",
+  why:"Stocks, flows, feedback and leverage points. Read before the CLD workshop.",
+  access:"buy",                  // "open" = free to all, "library" = via Oria/JSTOR
+  themes:["systems"],
+  weeks:[[4,"core"]] },          // week 4, as a core text
+```
+
+Use `*asterisks*` for the italics in the APA string. A text can belong to several weeks with
+different weight, e.g. `weeks:[[8,"supporting"],[15,"core"]]`. Add `role:"further"` for a
+suggested extra or `role:"context"` for background not tied to a week. Anything you mark
+`access:"open"` appears under the "free to read now" filter and in the count at the top of
+the page, so it is worth being accurate about that one.
+
+Reading appears in three places automatically: the reading page, the expanded week rows on
+the main page, and the count in the page header. You never enter a text twice.
+
+**To add a reading to the thematic clusters on the front page**, add a name to the right cluster in `literature`, or add a new cluster.
 Available `tone` values are `violet`, `teal`, `blue`, `amber` and `plum`.
 
 **To change the words in front of week numbers**, edit the `wording` block at the top:
