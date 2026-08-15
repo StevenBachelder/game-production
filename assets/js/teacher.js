@@ -62,7 +62,7 @@
   var note = el("section", "dayblock");
   note.appendChild(el("h2", "dayblock__h", "A note to the students"));
   if (t.note) {
-    var q = el("blockquote", "note");
+    var q = el("blockquote", "tnote");
     q.appendChild(el("p", null, "\u201C" + t.note + "\u201D"));
     q.appendChild(el("cite", null, t.name));
     note.appendChild(q);

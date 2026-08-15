@@ -100,6 +100,14 @@
     li.appendChild(el("b", null, f.name));
     li.appendChild(el("span", "when", f.when));
     li.appendChild(el("span", "note", f.note));
+    if (f.id) {
+      var a = el("a", "stretch");
+      a.href = "form.html?id=" + f.id;
+      a.setAttribute("aria-label", "How " + f.name.toLowerCase() + " work on this course");
+      li.appendChild(a);
+      li.classList.add("is-link");
+      li.appendChild(el("span", "forms__go", "\u2192"));
+    }
     $("forms").appendChild(li);
   });
 

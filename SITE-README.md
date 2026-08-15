@@ -159,6 +159,20 @@ the page, so it is worth being accurate about that one.
 Reading appears in three places automatically: the reading page, the expanded week rows on
 the main page, and the count in the page header. You never enter a text twice.
 
+**To fill in who teaches a form**, open `assets/js/course-data.js`, find the form in the
+`forms` list, and put teacher numbers in its `people` array:
+
+```js
+{ id:"supervision", name:"Group supervision", ...
+  reading:["schon1983","lankoski2017","fullerton2023"],
+  people:[3, 11] },        // ← teacher numbers from teacher-data.js
+```
+
+They appear on that form's page as links to their profiles. Until then the page says "to be
+confirmed" rather than showing a gap. The same list also carries `about`, `expect` and
+`prepare` — the explanation, what happens in the session, and what a student should do
+beforehand — and `reading`, which takes ids from `reading-data.js`.
+
 **To add a reading to the thematic clusters on the front page**, add a name to the right cluster in `literature`, or add a new cluster.
 Available `tone` values are `violet`, `teal`, `blue`, `amber` and `plum`.
 
