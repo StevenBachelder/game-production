@@ -260,6 +260,33 @@ const READING = [
   access:"open", url:"https://kilthub.cmu.edu/articles/book/Game_Design_Snacks_Easily_Digestible_Game_Design_Wisdom/8273315",
   themes:["design"], weeks:[[8,"supporting"]] },
 
+
+/* ---- added after the list was first drafted -------------------------------- */
+{ id:"anthropy2014", apa:"Anthropy, A., & Clark, N. (2014). *A game design vocabulary: Exploring the foundational principles behind good game design*. Addison-Wesley Professional.",
+  why:"The shared language the rest of the course assumes: verbs, objects, scenes, context.",
+  access:"buy", themes:["design"], weeks:[[2,"supporting"],[8,"supporting"]] },
+
+{ id:"goffman1974", apa:"Goffman, E. (1974). *Frame analysis: An essay on the organization of experience*. Harper & Row.",
+  why:"The full theory of frames: how you know what activity you are in, and what happens when it breaks.",
+  access:"buy", themes:["play","culture"], weeks:[[15,"supporting"]] },
+
+{ id:"goffman1979", apa:"Goffman, E. (1979). *Gender advertisements*. Harper & Row.",
+  why:"Frame analysis applied to pictures. A model of how close visual reading is actually done.",
+  access:"buy", themes:["culture","methods"], weeks:[[10,"supporting"],[15,"supporting"]] },
+
+{ id:"goffman1981", apa:"Goffman, E. (1981). *Forms of talk*. University of Pennsylvania Press.",
+  why:"Footing and participation frameworks \u2014 how speaking positions shift inside a frame.",
+  access:"buy", themes:["culture","play"], weeks:[[15,"supporting"]] },
+
+{ id:"harrison2003", apa:"Harrison, C., & Wood, P. (Eds.). (2003). *Art in theory 1900\u20132000: An anthology of changing ideas* (2nd ed.). Blackwell.",
+  why:"The standard anthology: what artists themselves have argued about intention across the century.",
+  access:"library", themes:["aesthetics"], weeks:[[9,"supporting"]] },
+
+{ id:"wille2025", apa:"Wille, J. I., Andreasen, S. J., & Wille, G. (2025). *How to create a universe*. University of Westminster Press. https://doi.org/10.16997/mpub.13071693",
+  why:"Nine chapters of method for building a fictional universe, with exercises and worked examples. Free.",
+  access:"open", url:"https://www.fulcrum.org/concern/monographs/td96k575f",
+  themes:["narrative","design"], weeks:[[7,"core"]] },
+
 /* ---- context: read when a project turns that way ---------------------------- */
 { id:"gee2007", apa:"Gee, J. P. (2007). *What video games have to teach us about learning and literacy* (2nd ed., rev. and updated). Palgrave Macmillan. (Original work published 2003)",
   why:"The case that good games are already good learning environments.",

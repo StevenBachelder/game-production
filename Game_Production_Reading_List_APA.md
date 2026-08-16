@@ -15,7 +15,7 @@ and further reading suggestions per week.
   Norwegian IP addresses — check there for *Kamerakuren*.
 - **Internet Archive** (archive.org) lends scans one reader at a time, free with a login.
   The quickest legitimate route to Dewey, Ostrom, Huizinga, Caillois and Piaget.
-- **OPEN ACCESS** and **FREE** entries need no login. There are twelve — enough to build required reading
+- **OPEN ACCESS** and **FREE** entries need no login. There are thirteen — enough to build required reading
   around, since every student can reach them on day one.
 
 ISBNs are for ordering; confirm at point of purchase.
@@ -23,6 +23,12 @@ ISBNs are for ordering; confirm at point of purchase.
 ---
 
 ## References
+
+Anthropy, A., & Clark, N. (2014). *A game design vocabulary: Exploring the foundational
+principles behind good game design*. Addison-Wesley Professional.
+> **Co-authored** — Naomi Clark wrote Part II. Anthropy's chapters cover language, verbs and
+> objects, scenes and context; Clark's cover dialogue, resistance and communities. Print
+> ISBN 978-0-321-88692-7; the 9780133155181 in your note is the ebook.
 
 Bogost, I. (2007). *Persuasive games: The expressive power of videogames*. MIT Press.
 
@@ -84,8 +90,22 @@ Psychology Press. (Original work published 1979)
 
 Goffman, E. (1961). *Encounters: Two studies in the sociology of interaction*. Bobbs-Merrill.
 > The essay you want is "Fun in Games". Named in your course document without a title.
-> His *Frame Analysis* (1974, Harvard University Press) is the fuller treatment of frames,
-> but *Encounters* is the one that speaks directly to games.
+> Named in your course document without a title. The essay you want is "Fun in Games".
+
+Goffman, E. (1974). *Frame analysis: An essay on the organization of experience*.
+Harper & Row.
+> The full theory of frames: how participants know what kind of activity they are in, and
+> what happens when a frame breaks. ISBN 978-0-06-090372-5. Northeastern University Press
+> reissued it in 1986. Some catalogues give the place as New York rather than London.
+
+Goffman, E. (1979). *Gender advertisements*. Harper & Row.
+> Frame analysis applied to pictures: how posture, hand placement and relative size ritualise
+> gender in advertising. A model of close visual analysis, which makes it useful for week 10
+> as well as for anyone designing characters. ISBN 978-0-06-132076-7. Also issued by Macmillan.
+
+Goffman, E. (1981). *Forms of talk*. University of Pennsylvania Press.
+> Footing and participation frameworks — how speakers shift their relation to what they say.
+> Relevant wherever a game structures who may speak and as what. ISBN 978-0-8122-7790-6.
 
 Greene, M. (1995). *Releasing the imagination: Essays on education, the arts, and social
 change*. Jossey-Bass.
@@ -97,6 +117,13 @@ https://doi.org/10.1126/science.162.3859.1243
 > PDF. Worth knowing before you assign it: Hardin's later writing on population and
 > immigration was explicitly racist, and most current syllabi note this and pair the essay
 > with Ostrom rather than presenting it alone.
+
+Harrison, C., & Wood, P. (Eds.). (2003). *Art in theory 1900–2000: An anthology of changing
+ideas* (2nd ed.). Blackwell. (Original work published 1992 as *Art in Theory 1900–1990*)
+> **Please don't link the Scribd copy.** It is a full unauthorised scan of an in-copyright
+> Wiley-Blackwell anthology, and pointing students to it from an institutional site is a
+> copyright exposure for the school. It is held widely — check Oria first. Paperback ISBN
+> 978-0-631-22708-3. Note the title is 1900–2000, not 1900–2001.
 
 Heft, H. (2001). *Ecological psychology in context: James Gibson, Roger Barker, and the
 legacy of William James's radical empiricism*. Erlbaum.
@@ -284,6 +311,17 @@ Walz, S. P. (2010). *Toward a ludic architecture: The space of play and games*. 
 > **OPEN ACCESS** — How play and games are architected in space, reading game design against
 > architectural theory. ISBN 978-0-557-28563-1.
 
+Wille, J. I., Andreasen, S. J., & Wille, G. (2025). *How to create a universe*. University
+of Westminster Press. https://doi.org/10.16997/mpub.13071693
+> **OPEN ACCESS** — free at <https://www.fulcrum.org/concern/monographs/td96k575f>, also on
+> JSTOR and OAPEN. 311 pp. with 249 colour illustrations. Nine chapters on universe building
+> from idea to publication, with interviews, exercises and worked examples drawn from *Squid
+> Game*, *Dark*, *Halo*, *Avatar* and others.
+>
+> Worth noting: the second author, **Simon Jon Andreasen**, appears to be the Simon Andreasen
+> on your teaching list. If so, week 7 has its world-building text and its author in the same
+> room — and it confirms the spelling I flagged earlier as uncertain.
+
 Wing, C. (2026). *Bounce: Balls, walls, and bodies in games and play*. MIT Press.
 https://doi.org/10.7551/mitpress/15053.001.0001
 > **OPEN ACCESS** —
@@ -318,8 +356,9 @@ game and why does it matter", and the right tone to open on.
 ### Week 2 · Game design, game studies, game theory, system dynamics
 **Core:** Salen & Zimmerman, *Rules of Play* — the field's shared vocabulary.
 Samuelson (2016) for game theory proper, and it is free.
-**Supporting:** Karabinus et al., *Historiographies of Game Studies*, for what game studies
-has been and could be. Free.
+**Supporting:** Anthropy & Clark, *A Game Design Vocabulary* — the shared language the rest
+of the course assumes. Karabinus et al., *Historiographies of Game Studies*, for what game
+studies has been and could be. Free.
 
 ### Week 3 · Narrative structure and narratology
 **Core:** Murray, *Hamlet on the Holodeck*.
@@ -342,7 +381,9 @@ commons model does.
 Consolidation before green-lighting; no new reading.
 
 ### Week 7 · World building, production, pipelines
-**Core:** Macklin & Sharp, *Games, Design and Play* — iterative process and the pitch.
+**Core:** Wille, Andreasen & Wille, *How to Create a Universe* — nine chapters of method for
+exactly this week, free, and co-written by one of your own teaching staff.
+Macklin & Sharp, *Games, Design and Play* — iterative process and the pitch.
 **Supporting:** Fullerton, *Game Design Workshop*, on prototyping and the green-light.
 Walz, *Toward a Ludic Architecture* — how play and games are architected in space. Free, and
 the closest thing on the list to a world-building text.
@@ -350,7 +391,8 @@ the closest thing on the list to a world-building text.
 ### Week 8 · Rules, mechanics, affordances — the gears of the game
 **Core:** Salen & Zimmerman on rules and mechanics; Swink, *Game Feel*, on what the gears
 feel like in the hand.
-**Supporting:** Costikyan, *Uncertainty in Games*; Wing, *Bounce* (free), whose account of
+**Supporting:** Anthropy & Clark, *A Game Design Vocabulary*, on verbs, objects and scenes.
+Costikyan, *Uncertainty in Games*; Wing, *Bounce* (free), whose account of
 "bounce feel" in FIFA is a case study in Swink's sense of the term. Zagal, *Game Design
 Snacks* (free) — short, concrete and grounded in released games, so it suits a team that
 wants examples rather than theory.
@@ -358,8 +400,10 @@ wants examples rather than theory.
 ### Week 9 · Artistic intentionality
 **Core:** Nguyen, *Games: Agency as Art* — designers shape not only what players do but what
 they want while playing. Sharp, *Works of Game*, for the games-as-art framing.
-**Supporting:** Clark & Kelomees, *[re|dis]connection* (free) — twenty-odd artists stating
-their intentions in their own words, which is the exercise week 9 asks of the teams.
+**Supporting:** Harrison & Wood, *Art in Theory 1900–2000* — the standard anthology, for
+students who want the arguments artists have made about intention in their own century.
+Clark & Kelomees, *[re|dis]connection* (free) — twenty-odd artists stating their intentions
+in their own words, which is the exercise week 9 asks of the teams.
 Dewey, *Art as Experience*, and Greene, *Releasing the Imagination*, for the aesthetic
 ground. Flanagan, *Critical Play*, and Sicart (2013) where the intention is
 political or ethical. Isbister, *How Games Move Us*, if the intention is emotional.
@@ -367,7 +411,8 @@ political or ethical. Isbister, *How Games Move Us*, if the intention is emotion
 ### Week 10 · Game analysis, peer to peer
 **Core:** Lankoski & Björk, *Game Research Methods*, analysis chapters. Free, so this can be
 required of everyone.
-**Supporting:** Sharp, *Works of Game*, as a worked example of critical analysis.
+**Supporting:** Sharp, *Works of Game*, as a worked example of critical analysis. Goffman,
+*Gender Advertisements*, as a model of how close visual reading is actually done.
 
 ### Week 11 · Review of student works; continuation of 4, 8 and 9
 No new reading. Send teams back to Meadows, Swink and Nguyen with their prototype in hand.
@@ -388,8 +433,9 @@ This is where the authors named in your course document finally have titles atta
 development of perception. Sutton-Smith, *The Ambiguity of Play*, for play as driver rather
 than product of culture. Huizinga, *Homo Ludens*, as the text they are both arguing with.
 **Supporting:** De Koven, *A Playful Path* (free), for playfulness as a disposition rather
-than an activity. Goffman, *Encounters* ("Fun in Games"), for the frame that holds play
-together. Vygotsky and Piaget for play in development. Upton, *The Aesthetic of Play*, and
+than an activity. Goffman on frames — *Encounters* ("Fun in Games") for play specifically,
+*Frame Analysis* for the full theory, *Forms of Talk* for how speaking positions shift
+inside a frame. Vygotsky and Piaget for play in development. Upton, *The Aesthetic of Play*, and
 Sicart, *Play Matters*, for the contemporary reframing. Wing, *Bounce* (free), for play as a
 material and bodily matter.
 

@@ -90,7 +90,7 @@ const COURSE = {
         "Bring your project in whatever state it is in.",
         "Bring materials — sketchbook, laptop, whatever your team works in."
       ],
-      reading: ["fullerton2023","macklin2016","hiwiller2019","meadows2008","zagal2019"],
+      reading: ["fullerton2023","macklin2016","wille2025","meadows2008","zagal2019"],
       people: [] },
 
     { id:"supervision", name: "Group supervision", when: "Wednesdays 9–12", track: "group",
