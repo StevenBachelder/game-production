@@ -11,6 +11,14 @@
 
   var KINDS = [["link", "Link"], ["pdf", "PDF"], ["slides", "Slides"], ["video", "Video"], ["file", "File"]];
 
+  /* Where the Send button addresses its mail. Change this one line if the
+     coordinator changes. */
+  var COORDINATOR = "steven.bachelder@inn.no";
+
+  /* Mail clients start truncating long mailto links. Past this we copy the
+     text to the clipboard instead and open a short draft to paste into. */
+  var MAILTO_LIMIT = 1900;
+
   /* ---- week checkboxes, straight from the course data ------------------- */
   COURSE.weeks.forEach(function (w) {
     var id = "wk-" + w.n;
@@ -135,8 +143,44 @@
     }
 
     /* --- the block to copy --- */
-    $("out").textContent = plain(name, role, inst, bio, note, desc, prep, res, wks);
+    var text = plain(name, role, inst, bio, note, desc, prep, res, wks);
+    $("out").textContent = text;
+    updateSend(name, text);
   }
+
+  /* ---- the Send button ------------------------------------------------------ */
+  function mailto(subject, body) {
+    return "mailto:" + COORDINATOR +
+           "?subject=" + encodeURIComponent(subject) +
+           "&body=" + encodeURIComponent(body.replace(/\n/g, "\r\n"));
+  }
+
+  function updateSend(name, text) {
+    var subject = "Game Production — session details" + (name ? " — " + name : "");
+    var href = mailto(subject, text);
+    var send = $("send");
+    var warn = $("send-warn");
+    send.dataset.subject = subject;
+    send.dataset.long = href.length > MAILTO_LIMIT ? "1" : "";
+    send.href = href.length > MAILTO_LIMIT ? mailto(subject, PASTE_HERE) : href;
+    warn.hidden = href.length <= MAILTO_LIMIT;
+  }
+
+  var PASTE_HERE = "Your entry has been copied to the clipboard.\r\n" +
+                   "Please paste it here (Ctrl+V, or Cmd+V on a Mac) and send.\r\n\r\n";
+
+  $("send").addEventListener("click", function (e) {
+    if (this.dataset.long) {
+      /* too long for a mail link — put the full text on the clipboard first */
+      var text = $("out").textContent;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text);
+      }
+      say("Copied — paste it into the draft that opens.");
+    } else {
+      say("Opening your email programme…");
+    }
+  });
 
   function plain(name, role, inst, bio, note, desc, prep, res, wks) {
     var L = [];

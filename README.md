@@ -174,10 +174,20 @@ confirmed" rather than showing a gap. The same list also carries `about`, `expec
 `prepare` — the explanation, what happens in the session, and what a student should do
 beforehand — and `reading`, which takes ids from `reading-data.js`.
 
+**Changing who the form is sent to.** One line, near the top of
+`assets/js/contribute.js`:
+
+```js
+var COORDINATOR = "steven.bachelder@inn.no";
+```
+
 **Collecting material from teachers.** Send them the link to `contribute.html`. It is a form
 with a live preview that formats what they type and gives them a block to copy and email
-back. Nothing is stored or transmitted — it is a text formatter, so there is no service to
-pay for, no account for them to make, and no personal data held anywhere. Paste what they
+back — or press **Send to the coordinator**, which opens a pre-filled email draft in their
+own mail programme. Nothing is stored or transmitted by the page itself; the mail goes
+directly from them to you, so there is no service to pay for, no account for them to make,
+and no third party holding anything. If an entry is too long to fit in a mail link, Send
+copies it to the clipboard and opens an empty draft to paste into. Paste what they
 send into `teacher-data.js` and `day-details.js`.
 
 **Resources** are `{ label, url, kind }` where kind is `link`, `pdf`, `slides`, `video` or

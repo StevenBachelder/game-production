@@ -106,10 +106,21 @@
           </div>
 
           <div class="cactions">
-            <button type="button" class="btn btn--primary" id="copy">Copy my entry</button>
+            <a class="btn btn--primary" id="send" href="#">Send to the coordinator</a>
+            <button type="button" class="btn" id="copy">Copy instead</button>
             <button type="button" class="btn" id="download">Download as a text file</button>
             <span class="saidit" id="said"></span>
           </div>
+          <p class="help" id="send-warn" hidden>
+            Your entry is longer than an email link can carry. Pressing Send will copy the
+            full text to your clipboard and open an empty draft — just paste it in.
+          </p>
+          <p class="help">
+            Send opens a draft in whatever email programme this computer uses, addressed to the
+            coordinator. Check it looks right before sending, and attach any files there. If
+            nothing opens — which happens on machines with no mail programme set up — use
+            <strong>Copy instead</strong> and paste it into webmail.
+          </p>
           <p class="help">
             What you send will be published on the public course website. Only your name, title,
             institution, bio link and the words you write here are used — nothing is collected
