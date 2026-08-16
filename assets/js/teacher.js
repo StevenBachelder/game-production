@@ -70,6 +70,15 @@
     note.appendChild(el("p", "empty", "A short note from " + t.name + " will go here."));
   }
   left.appendChild(note);
+
+  var res = el("section", "dayblock");
+  res.appendChild(el("h2", "dayblock__h", "Resources"));
+  if (t.resources && t.resources.length) {
+    res.appendChild(GP.resourceList(t.resources));
+  } else {
+    res.appendChild(el("p", "empty", "No links or files shared yet."));
+  }
+  left.appendChild(res);
   cols.appendChild(left);
 
   /* right: sessions this person is on */

@@ -80,6 +80,43 @@ var GP = (function () {
     };
   }
 
+  var KIND = { link:"Link", pdf:"PDF", slides:"Slides", video:"Video", file:"File" };
+
+  /* one <ul> of resources. Each item: { label, url, kind } */
+  function resourceList(items, extraClass) {
+    var ul = el("ul", "reslist" + (extraClass ? " " + extraClass : ""));
+    (items || []).forEach(function (r) {
+      if (!r || !r.label) return;
+      var li = el("li", "res");
+      var kind = KIND[r.kind] || (r.url ? "Link" : "");
+      if (kind) li.appendChild(el("span", "res__k res__k--" + (r.kind || "link"), kind));
+      if (r.url) {
+        var a = el("a", "res__a", r.label);
+        a.href = r.url;
+        if (/^https?:/.test(r.url)) { a.target = "_blank"; a.rel = "noopener noreferrer"; }
+        li.appendChild(a);
+      } else {
+        li.appendChild(el("span", "res__a", r.label));
+      }
+      if (r.by) li.appendChild(el("span", "res__by", r.by));
+      ul.appendChild(li);
+    });
+    return ul;
+  }
+
+  /* every resource offered by the teachers listed on a given date */
+  function teacherResourcesFor(dateIso) {
+    var out = [];
+    (details(dateIso).people || []).forEach(function (pid) {
+      var t = teacher(pid);
+      if (!t || !t.resources) return;
+      t.resources.forEach(function (r) {
+        out.push({ label: r.label, url: r.url, kind: r.kind, by: t.name });
+      });
+    });
+    return out;
+  }
+
   function param(name) {
     return new URLSearchParams(window.location.search).get(name);
   }
@@ -109,6 +146,7 @@ var GP = (function () {
     el: el, d: d, iso: iso, plus: plus, longDate: longDate, shortDate: shortDate,
     calWeekOf: calWeekOf, sessions: sessions, byDate: byDate, trackLabel: trackLabel,
     trackTime: trackTime, sessionText: sessionText, teacher: teacher, daysFor: daysFor,
-    details: details, param: param, avatar: avatar, initials: initials, WORD: WORD
+    details: details, param: param, avatar: avatar, initials: initials, WORD: WORD,
+    resourceList: resourceList, teacherResourcesFor: teacherResourcesFor
   };
 })();

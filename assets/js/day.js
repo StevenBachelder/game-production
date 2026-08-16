@@ -84,24 +84,14 @@
   }));
 
   left.appendChild(block("Resources", function (b) {
-    if (det.resources.length) {
-      var ul = el("ul", "reslist");
-      det.resources.forEach(function (r) {
-        var li = el("li");
-        if (r.url) {
-          var a = el("a", null, r.label);
-          a.href = r.url;
-          if (/^https?:/.test(r.url)) { a.target = "_blank"; a.rel = "noopener"; }
-          li.appendChild(a);
-        } else {
-          li.appendChild(el("span", null, r.label));
-        }
-        ul.appendChild(li);
-      });
-      b.appendChild(ul);
-    } else {
-      b.appendChild(empty("No readings or links added yet."));
+    var own = det.resources || [];
+    var fromTeachers = GP.teacherResourcesFor(s.date);
+    if (own.length) b.appendChild(GP.resourceList(own));
+    if (fromTeachers.length) {
+      b.appendChild(el("p", "reshead", own.length ? "From the teachers on this session" : "Shared by the teachers on this session"));
+      b.appendChild(GP.resourceList(fromTeachers, "reslist--by"));
     }
+    if (!own.length && !fromTeachers.length) b.appendChild(empty("No readings or links added yet."));
   }));
 
   cols.appendChild(left);

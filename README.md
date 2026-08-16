@@ -23,6 +23,7 @@ assets/js/teacher.js           builds teacher.html
 assets/js/teachers-page.js     builds teachers.html
 
 assets/img/teachers/           put teacher photographs here
+assets/resources/              PDFs and slide decks hosted on this site
 assets/downloads/              the slide deck, PDF and PowerPoint
 ```
 
@@ -172,6 +173,27 @@ They appear on that form's page as links to their profiles. Until then the page 
 confirmed" rather than showing a gap. The same list also carries `about`, `expect` and
 `prepare` — the explanation, what happens in the session, and what a student should do
 beforehand — and `reading`, which takes ids from `reading-data.js`.
+
+**Collecting material from teachers.** Send them the link to `contribute.html`. It is a form
+with a live preview that formats what they type and gives them a block to copy and email
+back. Nothing is stored or transmitted — it is a text formatter, so there is no service to
+pay for, no account for them to make, and no personal data held anywhere. Paste what they
+send into `teacher-data.js` and `day-details.js`.
+
+**Resources** are `{ label, url, kind }` where kind is `link`, `pdf`, `slides`, `video` or
+`file`. They live in two places:
+
+```js
+// assets/js/teacher-data.js — this person's own material
+resources: [ { label:"Lecture slides", url:"https://…", kind:"slides" } ]
+
+// assets/js/day-details.js — material for one specific session
+resources: [ { label:"Reading pack", url:"assets/resources/week8.pdf", kind:"pdf" } ]
+```
+
+A teacher's resources appear on their own page **and automatically on every session they are
+listed on**, credited to them, so you only enter them once. Files can be hosted anywhere; to
+host one here, drop it in `assets/resources/` and use that path as the url.
 
 **To add a reading to the thematic clusters on the front page**, add a name to the right cluster in `literature`, or add a new cluster.
 Available `tone` values are `violet`, `teal`, `blue`, `amber` and `plum`.

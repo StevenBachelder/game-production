@@ -783,3 +783,62 @@ main{flex:1 0 auto}
 .cardread__l{font-family:var(--mono); font-size:.68rem; color:var(--violet-deep); justify-self:start; border-bottom:1.5px solid var(--violet-wash); text-decoration:none}
 .cardread__l:hover{border-color:var(--violet)}
 .cardread .tag{justify-self:start}
+
+/* ---- resource lists ------------------------------------------------------------- */
+.reslist{display:grid; gap:.55rem}
+.res{display:flex; flex-wrap:wrap; align-items:baseline; gap:.55rem}
+.res__k{
+  font-family:var(--mono); font-size:.58rem; letter-spacing:.09em; text-transform:uppercase;
+  padding:.14rem .42rem; border-radius:4px; flex:none;
+  background:var(--violet-wash); color:var(--violet-deep);
+}
+.res__k--pdf{background:#FDE4E4; color:#9B2C2C}
+.res__k--slides{background:var(--amber-wash); color:var(--amber-ink)}
+.res__k--video{background:var(--teal-wash); color:var(--teal-ink)}
+.res__k--file{background:var(--paper-2); color:var(--muted)}
+.res__a{color:var(--body); text-decoration:none; border-bottom:1.5px solid var(--violet-wash); font-size:.97rem}
+a.res__a:hover{border-color:var(--violet); color:var(--violet-deep)}
+.res__by{font-family:var(--mono); font-size:.62rem; color:var(--faint)}
+.reshead{
+  font-family:var(--mono); font-size:.62rem; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--faint); margin:1.2rem 0 .6rem;
+}
+
+/* ---- contribute page ------------------------------------------------------------- */
+.cform{display:grid; gap:1.6rem; max-width:60ch}
+.field{display:grid; gap:.4rem}
+.field > label{font-family:var(--display); font-weight:600; font-size:1rem; color:var(--ink)}
+.field .help{font-size:.86rem; color:var(--muted)}
+.field input[type=text], .field input[type=url], .field textarea, .field select{
+  font-family:var(--serif); font-size:1rem; color:var(--body);
+  padding:.7rem .85rem; border:1.5px solid var(--line); border-radius:var(--r-sm);
+  background:var(--card); width:100%;
+}
+.field textarea{min-height:6.5rem; resize:vertical; line-height:1.55}
+.field input:focus, .field textarea:focus, .field select:focus{outline:none; border-color:var(--violet)}
+.count{font-family:var(--mono); font-size:.66rem; color:var(--faint); justify-self:end}
+.count.is-over{color:#9B2C2C}
+.checks{display:grid; grid-template-columns:repeat(2,1fr); gap:.4rem .9rem}
+.checks label{display:flex; gap:.5rem; align-items:baseline; font-size:.92rem; color:var(--body)}
+.checks input{margin-top:.25rem; accent-color:var(--violet)}
+@media (max-width:700px){ .checks{grid-template-columns:1fr} }
+
+.rrow{display:grid; grid-template-columns:1fr 1fr auto auto; gap:.5rem; align-items:center}
+.rrow select{max-width:8rem}
+.rrow .del{
+  font-family:var(--mono); font-size:.8rem; background:none; border:1.5px solid var(--line);
+  border-radius:var(--r-sm); width:2.2rem; height:2.4rem; cursor:pointer; color:var(--muted);
+}
+.rrow .del:hover{border-color:#9B2C2C; color:#9B2C2C}
+@media (max-width:700px){ .rrow{grid-template-columns:1fr 1fr; } .rrow .del{width:100%} }
+
+.cactions{display:flex; flex-wrap:wrap; gap:.7rem; align-items:center; margin-top:.5rem}
+.btn--primary{background:var(--ink); color:#fff; border-color:var(--ink)}
+.btn--primary:hover{background:var(--violet-deep); border-color:var(--violet-deep)}
+.saidit{font-family:var(--mono); font-size:.7rem; color:var(--teal-ink)}
+.outbox{
+  font-family:var(--mono); font-size:.72rem; line-height:1.5; white-space:pre-wrap;
+  background:var(--ink); color:#D8CFF2; padding:1.2rem; border-radius:var(--r);
+  max-height:22rem; overflow:auto; margin-top:1rem;
+}
+.previewwrap{position:sticky; top:5.2rem}

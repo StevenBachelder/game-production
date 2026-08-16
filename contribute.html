@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contribute your session — Game Production</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="For teaching staff: describe your session, add a note to the students, and list your resources.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="topbar__brand" href="index.html"><span class="topbar__mark" aria-hidden="true"></span>Game Production</a>
+    <nav class="topbar__nav" aria-label="Sections">
+      <a href="index.html#teaching">Teaching</a>
+      <a href="index.html#weeks">Weeks</a>
+      <a href="reading.html">Reading</a>
+      <a href="teachers.html">Teachers</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="formhead">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--light">For teaching staff</p>
+      <h1 class="formhead__t">Tell us about your session</h1>
+      <p class="formhead__n">
+        Nothing here is sent anywhere or stored. Fill it in, watch the preview build on the right,
+        then press <strong>Copy</strong> and send the result to the course coordinator. Ten minutes,
+        once, and your page is done.
+      </p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap daygrid">
+      <div>
+        <form class="cform" id="cform" autocomplete="off">
+
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <p class="help">As you would like it written on the site.</p>
+            <input type="text" id="f-name" placeholder="Jane Doe">
+          </div>
+
+          <div class="field">
+            <label for="f-role">Job title <span class="help">(optional)</span></label>
+            <input type="text" id="f-role" placeholder="Associate Professor, Game Design">
+          </div>
+
+          <div class="field">
+            <label for="f-inst">Institution <span class="help">(optional)</span></label>
+            <input type="text" id="f-inst" placeholder="INN University">
+          </div>
+
+          <div class="field">
+            <label for="f-bio">Link to your existing bio</label>
+            <p class="help">Wherever your profile already lives — your institution's staff page, your own site, ORCID. We link out rather than duplicating it.</p>
+            <input type="url" id="f-bio" placeholder="https://…">
+          </div>
+
+          <div class="field">
+            <label for="f-note">A note to the students</label>
+            <p class="help">One to three sentences in your own voice. Something you would say at the start of your session. For example: “Bring something you have made and are unsure about. Those are the interesting ones.”</p>
+            <textarea id="f-note" maxlength="400"></textarea>
+            <span class="count" data-for="f-note"></span>
+          </div>
+
+          <div class="field">
+            <label for="f-desc">Your lecture or workshop</label>
+            <p class="help">Two or three sentences on what actually happens in the session, written for students.</p>
+            <textarea id="f-desc" maxlength="700"></textarea>
+            <span class="count" data-for="f-desc"></span>
+          </div>
+
+          <div class="field">
+            <label for="f-prep">What should students do beforehand? <span class="help">(optional)</span></label>
+            <p class="help">One line per item.</p>
+            <textarea id="f-prep" placeholder="Read the week's core text&#10;Bring your prototype"></textarea>
+          </div>
+
+          <fieldset class="field" style="border:0;padding:0;margin:0">
+            <legend style="font-family:var(--display);font-weight:600;font-size:1rem;color:var(--ink)">Which sessions are you part of?</legend>
+            <p class="help">Tick any that apply. Leave blank if it is not settled yet.</p>
+            <div class="checks" id="f-weeks"></div>
+          </fieldset>
+
+          <div class="field">
+            <label>Your resources</label>
+            <p class="help">
+              Links, PDFs, slide decks, videos — anything you would like students to have. Host files
+              wherever suits you and paste the link. If you would rather we host a file, leave the link
+              blank, name it here, and send the file along with this form.
+            </p>
+            <div id="f-res"></div>
+            <div class="cactions">
+              <button type="button" class="btn" id="add-res">Add a resource</button>
+            </div>
+          </div>
+
+          <div class="cactions">
+            <button type="button" class="btn btn--primary" id="copy">Copy my entry</button>
+            <button type="button" class="btn" id="download">Download as a text file</button>
+            <span class="saidit" id="said"></span>
+          </div>
+          <p class="help">
+            What you send will be published on the public course website. Only your name, title,
+            institution, bio link and the words you write here are used — nothing is collected
+            automatically. Ask the coordinator at any time to change or remove it.
+          </p>
+        </form>
+      </div>
+
+      <aside>
+        <div class="previewwrap">
+          <p class="eyebrow">Live preview</p>
+          <div class="sidebox" id="preview"></div>
+          <pre class="outbox" id="out" aria-label="Text to copy"></pre>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p class="foot__l">Game Production · MFA</p>
+    <p class="foot__r"><a href="index.html">Back to the course</a></p>
+  </div>
+</footer>
+
+<script src="assets/js/course-data.js"></script>
+<script src="assets/js/contribute.js"></script>
+</body>
+</html>

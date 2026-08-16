@@ -14,6 +14,17 @@
      url      their official INN University profile page
      about    a short summary in your own words (2–3 sentences)
      note     a short message from them to the students
+     resources their own links, PDFs, slides and so on. Each one is
+              { label, url, kind } where kind is one of:
+                "link"   a web page
+                "pdf"    a PDF
+                "slides" a slide deck
+                "video"  a recording
+                "file"   anything else
+              Files can be hosted anywhere. To host one here instead, put it
+              in assets/resources/ and use "assets/resources/thing.pdf".
+              These appear on the teacher's page and on every session they
+              are listed on.
 
    PLEASE CHECK THE SPELLINGS. The names below were derived from the web
    addresses, so accents and middle names may be missing — for example the
@@ -24,78 +35,81 @@
 const TEACHERS = [
 
   { id: 1,  name: "Steven Bachelder",     surname: "Bachelder",     role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/steven-bachelder.html",     about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/steven-bachelder.html",     about: "", note: "",
+    resources: [
+      { label: "Course structure slides", url: "assets/downloads/Game_Production_Course_Structure.pdf", kind: "slides" },
+    ] },
 
   { id: 2,  name: "Gunhild Lien",         surname: "Lien",          role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/gunhild-lien.html",         about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/gunhild-lien.html",         about: "", note: "", resources: [] },
 
   { id: 3,  name: "Ole Haga",             surname: "Haga",          role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/ole-haga.html",             about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/ole-haga.html",             about: "", note: "", resources: [] },
 
   { id: 4,  name: "Esperanza Johnson",    surname: "Johnson",       role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/esperanza-johnson.html",    about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/esperanza-johnson.html",    about: "", note: "", resources: [] },
 
   { id: 5,  name: "Håvard Vibeto",        surname: "Vibeto",        role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/havard-vibeto.html",        about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/havard-vibeto.html",        about: "", note: "", resources: [] },
 
   { id: 6,  name: "Ole Allen",            surname: "Allen",         role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/ole-allen.html",            about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/ole-allen.html",            about: "", note: "", resources: [] },
 
   { id: 7,  name: "Meisam Taheri",        surname: "Taheri",        role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/meisam-taheri.html",        about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/meisam-taheri.html",        about: "", note: "", resources: [] },
 
   { id: 8,  name: "Sophie Mobbs",         surname: "Mobbs",         role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/sophie-mobbs.html",         about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/sophie-mobbs.html",         about: "", note: "", resources: [] },
 
   { id: 9,  name: "Simon Andreasen",      surname: "Andreasen",     role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/simon-andreasen.html",      about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/simon-andreasen.html",      about: "", note: "", resources: [] },
 
   { id: 10, name: "Fred Froehlich",       surname: "Froehlich",     role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/fred-froehlich.html",       about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/fred-froehlich.html",       about: "", note: "", resources: [] },
 
   { id: 11, name: "Christopher McNeill",  surname: "McNeill",       role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/christopher-mcneill.html",  about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/christopher-mcneill.html",  about: "", note: "", resources: [] },
 
   { id: 12, name: "Sanu Mana",            surname: "Mana",          role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/sanu-mana.html",            about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/sanu-mana.html",            about: "", note: "", resources: [] },
 
   { id: 13, name: "Ørjan Svendsen",       surname: "Svendsen",      role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/orjan-svendsen.html",       about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/orjan-svendsen.html",       about: "", note: "", resources: [] },
 
   { id: 14, name: "Dime Gjorgjievski",    surname: "Gjorgjievski",  role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/dime-gjorgjievski.html",    about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/dime-gjorgjievski.html",    about: "", note: "", resources: [] },
 
   { id: 15, name: "Ole Flaten",           surname: "Flaten",        role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/ole-flaten.html",           about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/ole-flaten.html",           about: "", note: "", resources: [] },
 
   { id: 16, name: "Jason Kao",            surname: "Kao",           role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/jason-kao.html",            about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/jason-kao.html",            about: "", note: "", resources: [] },
 
   { id: 17, name: "Dag Nylund",           surname: "Nylund",        role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/dag-nylund.html",           about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/dag-nylund.html",           about: "", note: "", resources: [] },
 
   { id: 18, name: "Ove Olsen",            surname: "Olsen",         role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/ove-olsen.html",            about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/ove-olsen.html",            about: "", note: "", resources: [] },
 
   { id: 19, name: "Kevin Tan",            surname: "Tan",           role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/kevin-tan.html",            about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/kevin-tan.html",            about: "", note: "", resources: [] },
 
   { id: 20, name: "Jimi Tornberg",        surname: "Tornberg",      role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/jimi-tornberg.html",        about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/jimi-tornberg.html",        about: "", note: "", resources: [] },
 
   { id: 21, name: "Frank Veenstra",       surname: "Veenstra",      role: "", photo: "",
-    url: "https://www.inn.no/finn-en-ansatt/frank-veenstra.html",       about: "", note: "" },
+    url: "https://www.inn.no/finn-en-ansatt/frank-veenstra.html",       about: "", note: "", resources: [] },
 
   /* ---- spare slots. Replace name and surname as people are confirmed. ---- */
-  { id: 22, name: "Teacher 22", surname: "\uFFFF22", role: "", photo: "", url: "", about: "", note: "" },
-  { id: 23, name: "Teacher 23", surname: "\uFFFF23", role: "", photo: "", url: "", about: "", note: "" },
-  { id: 24, name: "Teacher 24", surname: "\uFFFF24", role: "", photo: "", url: "", about: "", note: "" },
-  { id: 25, name: "Teacher 25", surname: "\uFFFF25", role: "", photo: "", url: "", about: "", note: "" },
-  { id: 26, name: "Teacher 26", surname: "\uFFFF26", role: "", photo: "", url: "", about: "", note: "" },
-  { id: 27, name: "Teacher 27", surname: "\uFFFF27", role: "", photo: "", url: "", about: "", note: "" },
-  { id: 28, name: "Teacher 28", surname: "\uFFFF28", role: "", photo: "", url: "", about: "", note: "" },
-  { id: 29, name: "Teacher 29", surname: "\uFFFF29", role: "", photo: "", url: "", about: "", note: "" },
-  { id: 30, name: "Teacher 30", surname: "\uFFFF30", role: "", photo: "", url: "", about: "", note: "" },
+  { id: 22, name: "Teacher 22", surname: "\uFFFF22", role: "", photo: "", url: "", about: "", note: "", resources: [] },
+  { id: 23, name: "Teacher 23", surname: "\uFFFF23", role: "", photo: "", url: "", about: "", note: "", resources: [] },
+  { id: 24, name: "Teacher 24", surname: "\uFFFF24", role: "", photo: "", url: "", about: "", note: "", resources: [] },
+  { id: 25, name: "Teacher 25", surname: "\uFFFF25", role: "", photo: "", url: "", about: "", note: "", resources: [] },
+  { id: 26, name: "Teacher 26", surname: "\uFFFF26", role: "", photo: "", url: "", about: "", note: "", resources: [] },
+  { id: 27, name: "Teacher 27", surname: "\uFFFF27", role: "", photo: "", url: "", about: "", note: "", resources: [] },
+  { id: 28, name: "Teacher 28", surname: "\uFFFF28", role: "", photo: "", url: "", about: "", note: "", resources: [] },
+  { id: 29, name: "Teacher 29", surname: "\uFFFF29", role: "", photo: "", url: "", about: "", note: "", resources: [] },
+  { id: 30, name: "Teacher 30", surname: "\uFFFF30", role: "", photo: "", url: "", about: "", note: "", resources: [] },
 
 ];
 
